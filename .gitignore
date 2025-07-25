@@ -1,0 +1,6 @@
+venv/
+venv331/
+venv312/
+bot_chart_model.h5
+*.exe
+__pycache__/
