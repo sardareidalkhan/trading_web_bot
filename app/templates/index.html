@@ -1,0 +1,119 @@
+<!-- ✅ UPDATED index.html with accurate timeframe handling and aligned with backend logic -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Signal Bot</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Trading Bot</h1>
+            <p>Advanced Chart Analysis & Signal Generation</p>
+        </div>
+        
+        <form method="post" action="/predict" id="tradingForm">
+            <div class="form-group">
+                <label for="platform">Trading Platform:</label>
+                <select name="platform" id="platform" required>
+                    <option value="">Select Platform</option>
+                    <option value="quotex" {% if platform == 'quotex' %}selected{% endif %}>Quotex</option>
+                    <option value="crypto" {% if platform == 'crypto' %}selected{% endif %}>Crypto</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="symbol">Asset Symbol:</label>
+                <input type="text" name="symbol" id="symbol" placeholder="e.g., EUR/JPY, BTC/USD" 
+                       value="{{ symbol }}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="timeframe">Chart Timeframe:</label>
+                <select name="timeframe" id="timeframe" required onchange="syncExpiryWithTimeframe()">
+                    <option value="">Select Timeframe</option>
+                    <option value="5s">5 Seconds</option>
+                    <option value="10s">10 Seconds</option>
+                    <option value="15s">15 Seconds</option>
+                    <option value="30s">30 Seconds</option>
+                    <option value="1m">1 Minute</option>
+                    <option value="2m">2 Minutes</option>
+                    <option value="3m">3 Minutes</option>
+                    <option value="5m">5 Minutes</option>
+                    <option value="10m">10 Minutes</option>
+                    <option value="15m">15 Minutes</option>
+                    <option value="30m">30 Minutes</option>
+                    <option value="1h">1 Hour</option>
+                    <option value="4h">4 Hour</option>
+                    <option value="1d">1 Day</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="expiry">Expiry Time:</label>
+                <select name="expiry" id="expiry" readonly style="pointer-events: none; background-color: #eee;">
+                    <option value="">Auto-selected</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">⚡ Get Signal</button>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analyzing chart patterns...</p>
+        </div>
+
+        {% if prediction %}
+        <div class="result-section">
+            <div class="signal-card">
+                {% if prediction.error %}
+                    <div class="signal-direction signal-error">⚠️ ERROR</div>
+                    <div class="error-message">{{ prediction.error }}</div>
+                {% else %}
+                    <div class="signal-direction {% if prediction.direction == 'UP' %}signal-up{% else %}signal-down{% endif %}">
+                        {% if prediction.direction == 'UP' %}📈 {{ prediction.direction }}{% else %}📉 {{ prediction.direction }}{% endif %}
+                    </div>
+                    <div class="signal-details">
+                        <div class="detail-item">
+                            <h4>Signal</h4>
+                            <p>{{ prediction.direction }}</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Expiry Time</h4>
+                            <p>{{ prediction.expiry_time }}</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Entry Timing</h4>
+                            <p>After You See Signal</p>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        document.getElementById('tradingForm').addEventListener('submit', function() {
+            document.getElementById('loading').style.display = 'block';
+        });
+
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'none';
+        }, 30000);
+
+        function syncExpiryWithTimeframe() {
+            const tf = document.getElementById('timeframe').value;
+            const expiry = document.getElementById('expiry');
+            if (tf) {
+                expiry.innerHTML = `<option value="${tf}">${tf.replace('m',' Minute').replace('s',' Seconds').replace('h',' Hour').replace('d',' Day')}</option>`;
+            } else {
+                expiry.innerHTML = `<option value="">Auto-selected</option>`;
+            }
+        }
+    </script>
+</body>
+</html>

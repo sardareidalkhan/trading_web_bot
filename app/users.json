@@ -1,0 +1,101 @@
+{
+    "admin@bot.com": {
+        "password": "admin123$$$=+",
+        "token": "a38f9285977376dc009f05d7e19179f3e3b012e0a8d439bdf610f6fc2a236fee",
+        "device_id": "7f5ebd726c8be3d554432c5396034b105d08882bd26b29c569bf1b88db0b3fc1",
+        "active": true,
+        "expires_at": "2030-12-31T23:59:59",
+        "last_login": "2025-07-25T23:46:44.516616",
+        "countdown": "1985 days, 0:13:14"
+    },
+    "user1": {
+        "password": "e3afed0047b08059d0fada10f400c1e5",
+        "token": "",
+        "device_id": null,
+        "active": false,
+        "expires_at": "2025-07-25T15:30:00",
+        "last_login": "",
+        "countdown": "Expired"
+    },
+    "111@com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "bd65b8170f0bfb31b22321ee3982dbdd80143039911c86782135cdedacd86bbf",
+        "device_id": "7f5ebd726c8be3d554432c5396034b105d08882bd26b29c569bf1b88db0b3fc1",
+        "active": false,
+        "expires_at": "2025-07-25T19:25:03.749917",
+        "last_login": "2025-07-25T13:25:25.101794",
+        "countdown": "Expired"
+    },
+    "tempuser@test.com": {
+        "password": "6ca13d52ca70c883e0f0bb101e425a89e8624de51db2d2392593af6a84118090",
+        "token": "73f9ff36d3d4e5407a211b6b3ed944cbf4b6848b33a1b0b0116c23f88e98702e",
+        "device_id": "7f5ebd726c8be3d554432c5396034b105d08882bd26b29c569bf1b88db0b3fc1",
+        "active": false,
+        "expires_at": "2025-07-25T00:42",
+        "last_login": "2025-07-24T19:41:30.045148",
+        "countdown": "Expired"
+    },
+    "tempuser1@test.com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "9dc07ab9690d6a1dad4662b142c615ef481238738227bfdef71dbdf8012f0768",
+        "device_id": "7f5ebd726c8be3d554432c5396034b105d08882bd26b29c569bf1b88db0b3fc1",
+        "active": false,
+        "expires_at": "2025-07-24T20:01:00",
+        "last_login": "2025-07-24T20:00:55.516175",
+        "countdown": "Expired"
+    },
+    "tempuser2@test.com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "674c623258f438ff3e9fe232f8a950a149ec7106435accf148e3482d8d01b950",
+        "device_id": "7f5ebd726c8be3d554432c5396034b105d08882bd26b29c569bf1b88db0b3fc1",
+        "active": false,
+        "expires_at": "2025-07-25T01:23",
+        "last_login": "2025-07-24T20:22:12.198527",
+        "countdown": "Expired"
+    },
+    "tempuser3@test.com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "ee620193f428b7d4703a05af967d4b5d98068499342e522d8991a1e6d247e913",
+        "device_id": "7f5ebd726c8be3d554432c5396034b105d08882bd26b29c569bf1b88db0b3fc1",
+        "active": false,
+        "expires_at": "2025-07-25T14:15:56.704539",
+        "last_login": "2025-07-25T09:16:25.057093",
+        "countdown": "Expired"
+    },
+    "tempuser4@test.com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "33b757fa7c1d85c9ec61a8c046f8f1ed1e25c7ae19be6e9da6b9f23bb94f166c",
+        "device_id": "7f5ebd726c8be3d554432c5396034b105d08882bd26b29c569bf1b88db0b3fc1",
+        "active": false,
+        "expires_at": "2025-07-25T14:32:34.241129",
+        "last_login": "2025-07-25T09:31:06.672533",
+        "countdown": "Expired"
+    },
+    "tempuser5@test.com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "",
+        "device_id": null,
+        "active": false,
+        "expires_at": "2025-07-25T14:35:07.101019",
+        "last_login": "",
+        "countdown": "Expired"
+    },
+    "tempuser6@test.com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "",
+        "device_id": null,
+        "active": false,
+        "expires_at": "2025-07-25T16:11:03.929641",
+        "last_login": "",
+        "countdown": "Expired"
+    },
+    "tempuser7@test.com": {
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "token": "",
+        "device_id": null,
+        "active": false,
+        "expires_at": "2025-07-25T17:16:50.731295",
+        "last_login": "",
+        "countdown": "Expired"
+    }
+}

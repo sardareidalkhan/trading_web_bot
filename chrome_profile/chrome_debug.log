@@ -1,0 +1,9 @@
+[5528:16276:0620/003645.385:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[9832:14596:0620/003645.537:WARNING:ui\gl\direct_composition_support.cc:1167] QueryInterface to IDCompositionDevice4 failed: No such interface supported (0x80004002)
+[5528:16276:0620/003648.068:INFO:CONSOLE:2] "[bugsnag] Loaded!", source: https://market-qx.pro/trade-room/react/vendor.js?v=1750346551 (2)
+[5528:16276:0620/003650.014:INFO:CONSOLE:2] "-----> connect serverTime=Fri Jun 20 2025 00:36:50 GMT+0500 (Pakistan Standard Time)", source: https://market-qx.pro/trade-room/react/vendor.js?v=1750346551 (2)
+[5528:16276:0620/003650.761:INFO:CONSOLE:2] "
+ %c %c %c PixiJS 5.3.12 - ✰ WebGL 2 ✰  %c  %c  http://www.pixijs.com/  %c %c ♥%c♥%c♥ 
+
+ background: #ff66a5; padding:5px 0; background: #ff66a5; padding:5px 0; color: #ff66a5; background: #030307; padding:5px 0; background: #ff66a5; padding:5px 0; background: #ffc3dc; padding:5px 0; background: #ff66a5; padding:5px 0; color: #ff2424; background: #fff; padding:5px 0; color: #ff2424; background: #fff; padding:5px 0; color: #ff2424; background: #fff; padding:5px 0;", source: https://market-qx.pro/trade-room/react/vendor.js?v=1750346551 (2)
+[5528:16276:0620/003651.012:INFO:CONSOLE:2] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://market-qx.pro/trade-room/react/vendor.js?v=1750346551 (2)

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <style>
+    body.dark-theme {
+      background-color: #121212;
+      color: #f2f2f2;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    .admin-container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .search-bar {
+      margin: 1rem 0;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #333;
+      background-color: #2a2a2a;
+      color: white;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #333;
+      text-align: left;
+    }
+    tr.active {
+      background-color: #004400;
+    }
+    tr.inactive {
+      background-color: #440000;
+    }
+    .btn-toggle {
+      padding: 6px 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn-toggle.on {
+      background-color: #00c853;
+      color: white;
+    }
+    .btn-toggle.off {
+      background-color: #d50000;
+      color: white;
+    }
+    .form-section {
+      margin-top: 3rem;
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #2a2a2a;
+      color: white;
+    }
+    .form-inline {
+      display: flex;
+      gap: 1rem;
+    }
+    .form-inline .form-group {
+      flex: 1;
+    }
+    .btn-submit {
+      background-color: #2196F3;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .countdown {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%;
+      color: white;
+    }
+    .modal-content input {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.4rem;
+      background: #2a2a2a;
+      border: 1px solid #555;
+      color: white;
+    }
+    .modal-buttons {
+      margin-top: 1rem;
+      text-align: right;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <div class="admin-container">
+    <h1>👑 Admin Dashboard</h1>
+    <p>📅 Date: {{ current_date }}</p>
+    <p>🧑‍💼 Logged in as: {{ user.username }}</p>
+    <p>🔢 Total Users: {{ user_count }}</p>
+
+    <!-- 🔍 Search -->
+    <div class="search-bar">
+      <input type="text" id="userSearch" placeholder="🔍 Search by email..." />
+    </div>
+
+    <h2>📋 User Accounts</h2>
+    <div id="user-table">
+      {% include 'partials/user_table.html' %}
+    </div>
+
+    <div class="form-section">
+      <h2>➕ Create New User</h2>
+      <form method="post" action="/admin/create-user">
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" name="username" required />
+        </div>
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="text" name="password" required />
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <label>Days:</label>
+            <input type="number" name="days" min="0" value="0" />
+          </div>
+          <div class="form-group">
+            <label>Hours:</label>
+            <input type="number" name="hours" min="0" value="0" />
+          </div>
+          <div class="form-group">
+            <label>Minutes:</label>
+            <input type="number" name="minutes" min="0" value="1" />
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">✅ Create User</button>
+      </form>
+    </div>
+
+    <div class="logout-section">
+      <a href="/logout-admin" class="btn-logout">🚪 Logout</a>
+    </div>
+  </div>
+
+  <!-- 🔁 Auto Refresh every 5s — paused while typing in search -->
+  <script>
+    let refreshInterval;
+    let isSearching = false;
+
+    function startAutoRefresh() {
+      refreshInterval = setInterval(() => {
+        if (!isSearching) {
+          fetch('/admin/user-table', { cache: 'no-store' })
+            .then(res => res.text())
+            .then(html => {
+              document.getElementById('user-table').innerHTML = html;
+              attachToggleHandlers();
+            });
+        }
+      }, 5000);
+    }
+
+    document.getElementById('userSearch').addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      const isEmpty = query.trim() === '';
+      isSearching = !isEmpty;
+
+      document.querySelectorAll('#user-table tbody tr').forEach(row => {
+        const email = row.querySelector('td')?.textContent?.toLowerCase() || '';
+        row.style.display = email.includes(query) ? '' : 'none';
+      });
+    });
+
+    startAutoRefresh();
+  </script>
+
+  <!-- 🧾 Modal -->
+  <div id="expiryModal" class="modal">
+    <div class="modal-content">
+      <h3>⏳ Set Expiry Duration</h3>
+      <form id="expiryForm" method="post" action="/admin/toggle-user">
+        <input type="hidden" name="email" id="modalEmail" />
+        <div>
+          <label>Days:</label>
+          <input type="number" name="days" min="0" value="30" />
+        </div>
+        <div>
+          <label>Hours:</label>
+          <input type="number" name="hours" min="0" value="0" />
+        </div>
+        <div>
+          <label>Minutes:</label>
+          <input type="number" name="minutes" min="0" value="0" />
+        </div>
+        <div class="modal-buttons">
+          <button type="submit" class="btn-submit">✅ Confirm</button>
+          <button type="button" onclick="document.getElementById('expiryModal').style.display='none'">❌ Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ⚙️ Intercept Toggle Submit -->
+  <script>
+    function attachToggleHandlers() {
+      document.querySelectorAll('form[action="/admin/toggle-user"]').forEach(form => {
+        form.addEventListener('submit', e => {
+          const isEnabling = form.querySelector('.btn-toggle')?.classList.contains('on');
+          const email = form.querySelector('input[name="email"]').value;
+          if (isEnabling) {
+            e.preventDefault();
+            document.getElementById('modalEmail').value = email;
+            document.getElementById('expiryModal').style.display = 'flex';
+          }
+        });
+      });
+    }
+    attachToggleHandlers();
+  </script>
+</body>
+</html>

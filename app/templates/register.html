@@ -1,0 +1,34 @@
+<!-- ✅ register.html — Updated with contact notice -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Trading Bot</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="dark-theme">
+  <div class="auth-container">
+    <h1>Create Account</h1>
+
+    <p class="info-text">
+      🚫 Direct registration is disabled.<br>
+      To create an account, please contact the admin:
+    </p>
+
+    <div class="contact-box">
+      📱 WhatsApp: <a href="https://wa.me/YourNumber" target="_blank">+1234567890</a><br>
+      📸 Instagram: <a href="https://instagram.com/YourHandle" target="_blank">@YourHandle</a>
+    </div>
+
+    <p class="info-text">
+      Once your account is created, come back here to <a href="/login">log in</a>.
+    </p>
+
+    {% if error %}
+      <p class="error">⚠️ {{ error }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>

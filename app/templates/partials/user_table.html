@@ -1,0 +1,55 @@
+<table class="user-table">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Status</th>
+      <th>Expires</th>
+      <th>Countdown</th>
+      <th>Token</th>
+      <th>Last Login</th>
+      <th>Toggle</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for email, u in users.items() %}
+    <tr class="{{ 'active' if u.active else 'inactive' }}">
+      <td>{{ email }}</td>
+      <td>{{ '✅ ON' if u.active else '❌ OFF' }}</td>
+      <td>
+        {% if u.expires_at %}
+          {{ u.expires_at.replace('T', ' ') }}
+        {% else %}
+          ❌ Never
+        {% endif %}
+      </td>
+      <td>
+        {% if u.countdown %}
+          ⏳ {{ u.countdown }}
+        {% else %}
+          ❌
+        {% endif %}
+      </td>
+      <td>{{ '✅' if u.token else '❌' }}</td>
+      <td>
+        {% if u.last_login %}
+          {{ u.last_login.replace('T', ' ') }}
+        {% else %}
+          Never
+        {% endif %}
+      </td>
+      <td>
+        {% if email == "admin@bot.com" %}
+          🔒 Protected
+        {% else %}
+        <form method="post" action="/admin/toggle-user">
+          <input type="hidden" name="email" value="{{ email }}">
+          <button type="submit" class="btn-toggle {{ 'off' if u.active else 'on' }}">
+            {{ 'Disable' if u.active else 'Enable' }}
+          </button>
+        </form>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,677 @@
+[
+  {
+    "timestamp": "2025-07-25T13:27:36.935216",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:26:41.148462",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:26:10.587222",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:24:26.169455",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:23:50.714321",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:23:09.211340",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:22:24.441125",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:21:46.272227",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:21:09.159514",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:20:30.512905",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:19:18.977807",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:18:40.697321",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:17:59.270407",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:17:19.268425",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:13:20.953247",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:12:41.255493",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:12:01.270468",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:10:47.842154",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:10:17.520274",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:09:09.639874",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:08:43.558649",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:06:16.260713",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:05:50.935726",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:05:27.345315",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:05:06.671622",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:04:38.926848",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:04:13.074012",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:03:49.310585",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:03:02.764111",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-25T13:02:35.611752",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:02:04.161769",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T13:01:39.656188",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T12:49:37.594954",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T09:35:43.715090",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T09:33:23.475432",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T09:32:57.248306",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T09:31:33.452573",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-25T09:17:11.567685",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T20:33:03.496116",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T20:29:05.083938",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T20:28:23.349590",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T20:25:40.386563",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T20:24:30.064694",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T20:22:54.327819",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T20:02:42.122970",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T20:02:07.696072",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T20:01:28.734306",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T19:43:27.113957",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T19:42:42.027576",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T19:00:04.207072",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T17:54:00.578544",
+    "user": "abcd1234",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T17:53:29.614861",
+    "user": "abcd1234",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T17:48:35.688376",
+    "user": "abcd1234",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T17:44:58.882761",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T17:41:18.472503",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T17:40:51.904710",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T17:40:17.278703",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T17:35:03.564583",
+    "user": "abcd1234",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T17:33:41.984726",
+    "user": "abcd1234",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T17:31:50.889664",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T11:07:27.272816",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-24T11:00:04.550410",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T10:13:48.746891",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-24T09:56:01.184539",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-23T23:35:42.344466",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-23T23:32:06.505620",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-23T23:31:43.871228",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-23T23:30:01.227676",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-23T22:22:52.829201",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-23T22:17:55.588580",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-23T22:02:00.972920",
+    "user": "admin@bot.com",
+    "symbol": "USD/INR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-23T20:25:45.621749",
+    "user": "sardareidalkhan11@gmail.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-23T20:19:25.101898",
+    "user": "sardareidalkhan11@gmail.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-23T20:05:01.237954",
+    "user": "sardareidalkhan11@gmail.com",
+    "symbol": "USD/PHP OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-23T20:04:07.067039",
+    "user": "sardareidalkhan11@gmail.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  }
+]
