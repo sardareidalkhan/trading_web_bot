@@ -1,14 +1,9 @@
-# run.py
-
 import sys
 import asyncio
 import uvicorn
 import logging
 
 def configure_asyncio():
-    """
-    Configures the asyncio event loop for Windows compatibility.
-    """
     if sys.platform.startswith("win"):
         policy = asyncio.WindowsProactorEventLoopPolicy()
         asyncio.set_event_loop_policy(policy)
@@ -16,9 +11,6 @@ def configure_asyncio():
         asyncio.set_event_loop(loop)
 
 def configure_logging():
-    """
-    Optional: Configure logging for better visibility.
-    """
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
@@ -26,12 +18,9 @@ def configure_logging():
     )
 
 def start_server():
-    """
-    Starts the FastAPI backend using Uvicorn.
-    """
     uvicorn.run(
         "app.main:app",
-        host="127.0.0.1",
+        host="0.0.0.0",  # ✅ Needed for Docker/Render
         port=8000,
         reload=False,
         workers=1,
