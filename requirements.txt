@@ -14,7 +14,7 @@ numpy==1.24.3
 
 # Data analysis and technical indicators
 pandas==2.0.3
-TA-Lib==0.4.28
+TA-Lib-binary==0.4.0  # ✅ Replaces TA-Lib to avoid C compilation issues
 
 # HTTP requests
 requests==2.31.0
