@@ -1,5 +1,14 @@
 [
   {
+    "timestamp": "2025-07-27T18:28:01.024645",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
     "timestamp": "2025-07-25T13:27:36.935216",
     "user": "admin@bot.com",
     "symbol": "USD/INR OTC",
