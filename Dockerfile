@@ -2,27 +2,27 @@ FROM continuumio/miniconda3
 
 WORKDIR /app
 
-# Copy environment definition
+# Copy environment setup files
 COPY environment.yml .
 COPY requirements.txt .
 
-# Create the Conda environment
+# Create Conda environment
 RUN conda env create -f environment.yml
-
-# Activate environment for subsequent RUN commands
 SHELL ["conda", "run", "-n", "tradingbot", "/bin/bash", "-c"]
 
-# ✅ Install Python packages with pip
+# Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
-
-# ✅ Install Playwright browsers
 RUN python -m playwright install
 
-# Copy all source files
+# Copy full project files
 COPY . .
 
-# Expose FastAPI port
+# ✅ Download models from Google Drive (entire folder)
+RUN pip install gdown
+RUN python download_models.py
+
+# Expose port for FastAPI
 EXPOSE 8000
 
-# Run the app
-CMD ["conda", "run", "--no-capture-output", "-n", "tradingbot", "python", "app/main.py"]
+# Start your FastAPI app
+CMD ["conda", "run", "--no-capture-output", "-n", "tradingbot", "python", "run.py"]

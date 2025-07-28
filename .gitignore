@@ -1,10 +1,25 @@
+# Python virtual environments
 venv/
 venv331/
 venv312/
-**/venv/
-**/venv312/
-**/venv331/
-bot_chart_model.h5
-*.exe
+**/venv*/
+**/venv312*/
+**/venv331*/
+
+# Python caches
 __pycache__/
-EXTRA_THINGS/all_dataset/*.h5
+*.pyc
+*.pyo
+*.pyd
+
+# Executables
+*.exe
+
+# Model files
+EXTRA_THINGS/all_dataset/
+*.h5
+
+# Logs, junk, OS-specific
+*.log
+.DS_Store
+Thumbs.db
