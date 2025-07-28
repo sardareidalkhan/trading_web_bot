@@ -73,8 +73,20 @@ async def get_current_user(request: Request, token: str = Cookie(default=None), 
 
     return {"username": user["username"]}
 
+@app.get("/", response_class=HTMLResponse)
+async def landing_page(request: Request, user: dict = Depends(get_current_user)):
+    return templates.TemplateResponse("index.html", {
+        "request": request,
+        "symbol": "",
+        "prediction": None,
+        "timeframe": "",
+        "expiry": "",
+        "platform": "",
+        "user": user
+    })
+
 @app.get("/dashboard", response_class=HTMLResponse)
-async def home(request: Request, user: dict = Depends(get_current_user)):
+async def dashboard(request: Request, user: dict = Depends(get_current_user)):
     if not user:
         return RedirectResponse(url="/login")
     return templates.TemplateResponse("index.html", {
@@ -299,8 +311,3 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     logger.info("🛑 Trading Bot API shutting down")
-
-# ✅ Redirect root to login so users see UI
-@app.get("/", response_class=HTMLResponse)
-async def root():
-    return RedirectResponse(url="/login")

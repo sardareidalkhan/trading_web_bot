@@ -1,25 +1,27 @@
 import os
-import subprocess
+import gdown
+import zipfile
 
-# Your Google Drive folder ID for `all_dataset`
-FOLDER_ID = "1gbkQveWb_fepsCmC0r5oif7ecy7LrZNz"
+# ⚠️ CHANGE THIS TO YOUR ZIP FILE ID (not folder!)
+file_id = "YOUR_MODEL_ZIP_FILE_ID"  # Example: "1a2b3c4d..."
 
-# Output directory inside your project
-TARGET_DIR = os.path.join("EXTRA_THINGS", "all_dataset")
-os.makedirs(TARGET_DIR, exist_ok=True)
+zip_path = "model.zip"
+extract_path = os.path.join("EXTRA_THINGS", "all_dataset")
+os.makedirs(extract_path, exist_ok=True)
 
-def download_all_models():
-    print("⬇️ Downloading all_dataset folder from Google Drive...")
+def download_and_extract_zip():
     try:
-        subprocess.run([
-            "gdown",
-            f"--folder https://drive.google.com/drive/folders/{FOLDER_ID}",
-            "--output", TARGET_DIR,
-            "--quiet"
-        ], check=True)
-        print("✅ Models downloaded successfully to:", TARGET_DIR)
-    except subprocess.CalledProcessError as e:
-        print("❌ Failed to download model folder:", e)
+        url = f"https://drive.google.com/uc?id={file_id}"
+        print("⬇️ Downloading model ZIP...")
+        gdown.download(url, zip_path, quiet=False)
+
+        print("📦 Extracting...")
+        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            zip_ref.extractall(extract_path)
+
+        print(f"✅ Models extracted to: {extract_path}")
+    except Exception as e:
+        print("❌ Failed to download or extract model zip:", e)
 
 if __name__ == "__main__":
-    download_all_models()
+    download_and_extract_zip()
