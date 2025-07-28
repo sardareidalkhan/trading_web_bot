@@ -1,3 +1,5 @@
+# 🔁 Triggering redeploy for root route
+
 from fastapi import FastAPI, Request, Form, Cookie, Response, Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
