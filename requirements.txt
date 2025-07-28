@@ -1,31 +1,33 @@
-# Core FastAPI and web framework
+# --- Core Web Framework ---
 fastapi==0.104.1
 uvicorn==0.24.0
 jinja2==3.1.2
 python-multipart==0.0.6
 
-# Browser automation
-playwright==1.27.1
-
-# Image processing
-Pillow==10.3.0
-opencv-python==4.8.1.78
-numpy==1.24.3
-
-# Data analysis and technical indicators
-pandas==2.0.3
-TA-Lib==0.4.28  # ✅ Must match the compiled version
-
-# HTTP requests
-requests==2.31.0
+# --- Async Support ---
 aiohttp==3.9.1
-
-# Async support
 asyncio-throttle==1.0.2
 
-# Logging and utilities
-python-dotenv==1.0.0
+# --- HTTP & Networking ---
+requests==2.31.0
 
-# Optional: For enhanced chart analysis
+# --- Data Science & Analysis ---
+pandas==2.0.3
+numpy==1.24.3  # Required for TA-Lib
+
+# --- Technical Indicators (TA-Lib precompiled)
+TA-Lib==0.4.28  # ✅ Works on Python 3.11
+
+# --- Machine Learning & Charting ---
 scikit-learn==1.3.2
 matplotlib==3.7.2
+
+# --- Image Processing ---
+Pillow==10.3.0
+opencv-python==4.8.1.78
+
+# --- Browser Automation ---
+playwright==1.27.1
+
+# --- Environment Configuration ---
+python-dotenv==1.0.0
