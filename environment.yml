@@ -5,5 +5,3 @@ dependencies:
   - python=3.11
   - ta-lib
   - pip
-  - pip:
-      - -r requirements.txt
