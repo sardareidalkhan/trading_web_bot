@@ -28,3 +28,6 @@ python-dotenv==1.0.0
 # Optional: For enhanced chart analysis
 scikit-learn==1.3.2
 matplotlib==3.7.2
+
+# ✅ AI Model Support
+tensorflow==2.14.0
