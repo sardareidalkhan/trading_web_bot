@@ -1,5 +1,3 @@
-# 🔁 Triggering redeploy for root route
-
 from fastapi import FastAPI, Request, Form, Cookie, Response, Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -302,7 +300,7 @@ async def startup_event():
 async def shutdown_event():
     logger.info("🛑 Trading Bot API shutting down")
 
-# ✅ Public "/" route so homepage is not blank
+# ✅ Redirect root to login so users see UI
 @app.get("/", response_class=HTMLResponse)
 async def root():
-    return "<h1>✅ Trading Web Bot is Live</h1><p>Go to <a href='/docs'>/docs</a> for API</p>"
+    return RedirectResponse(url="/login")
