@@ -1,6 +1,10 @@
 venv/
 venv331/
 venv312/
+**/venv/
+**/venv312/
+**/venv331/
 bot_chart_model.h5
 *.exe
 __pycache__/
+EXTRA_THINGS/all_dataset/*.h5
