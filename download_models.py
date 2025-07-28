@@ -3,7 +3,7 @@ import gdown
 import zipfile
 
 # ⚠️ CHANGE THIS TO YOUR ZIP FILE ID (not folder!)
-file_id = "YOUR_MODEL_ZIP_FILE_ID"  # Example: "1a2b3c4d..."
+file_id = "1T-wQFIpBHvFthlC_-y0hoaDN9C999-hM"
 
 zip_path = "model.zip"
 extract_path = os.path.join("EXTRA_THINGS", "all_dataset")
