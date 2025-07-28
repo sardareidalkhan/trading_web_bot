@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Copy environment config and requirements
 COPY environment.yml .
-COPY requirements.txt .  # ✅ This line is essential!
+COPY requirements.txt .
 
 # Create Conda environment (includes TA-Lib prebuilt)
 RUN conda env create -f environment.yml
