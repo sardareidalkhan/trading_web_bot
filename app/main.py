@@ -1,4 +1,3 @@
-# FULLY UPDATED main.py with all required admin panel features
 from fastapi import FastAPI, Request, Form, Cookie, Response, Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -74,7 +73,7 @@ async def get_current_user(request: Request, token: str = Cookie(default=None), 
 
     return {"username": user["username"]}
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/dashboard", response_class=HTMLResponse)
 async def home(request: Request, user: dict = Depends(get_current_user)):
     if not user:
         return RedirectResponse(url="/login")
@@ -98,7 +97,7 @@ async def login_submit(request: Request, response: Response, username: str = For
     result = authenticate_user(username, password, device_id=device_id)
 
     if result["success"]:
-        response = RedirectResponse(url="/", status_code=302)
+        response = RedirectResponse(url="/dashboard", status_code=302)
         cookie_name = "admin_token" if username == "admin@bot.com" else "token"
         response.set_cookie(key=cookie_name, value=result["token"], httponly=True)
         return response
@@ -236,7 +235,6 @@ async def refresh_user_table(request: Request, user: dict = Depends(get_current_
         "users": users
     })
 
-# ✅ UPDATED toggle-user logic with expiry prompt
 @app.post("/admin/toggle-user")
 async def toggle_user(
     email: str = Form(...),
@@ -247,7 +245,7 @@ async def toggle_user(
     users = load_users()
     if email in users and email != "admin@bot.com":
         user = users[email]
-        if not user.get("active", True):  # Enabling a disabled user
+        if not user.get("active", True):
             now = get_pakistan_time()
             expiry = now + timedelta(days=days, hours=hours, minutes=minutes)
             user["expires_at"] = expiry.isoformat()
@@ -301,3 +299,8 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     logger.info("🛑 Trading Bot API shutting down")
+
+# ✅ Public "/" route so homepage is not blank
+@app.get("/", response_class=HTMLResponse)
+async def root():
+    return "<h1>✅ Trading Web Bot is Live</h1><p>Go to <a href='/docs'>/docs</a> for API</p>"
