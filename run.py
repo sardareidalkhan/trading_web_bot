@@ -2,6 +2,7 @@ import sys
 import asyncio
 import uvicorn
 import logging
+import os
 
 def configure_asyncio():
     if sys.platform.startswith("win"):
@@ -18,10 +19,11 @@ def configure_logging():
     )
 
 def start_server():
+    port = int(os.environ.get("PORT", 8000))  # ✅ Read port from env for Render
     uvicorn.run(
         "app.main:app",
-        host="0.0.0.0",  # ✅ Needed for Docker/Render
-        port=8000,
+        host="0.0.0.0",  # ✅ Required for Render/Docker
+        port=port,
         reload=False,
         workers=1,
     )
