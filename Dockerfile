@@ -1,28 +1,28 @@
-FROM python:3.11-slim
+# Use official Python image with Anaconda (includes TA-Lib)
+FROM continuumio/miniconda3:latest
 
-# Install system-level dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    wget \
-    build-essential \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    && apt-get clean
+# Set working directory
+WORKDIR /app
 
-# Fix pip and install precompiled wheels
-RUN pip install --upgrade pip wheel
+# Install TA-Lib C library and other dependencies
+RUN apt-get update && \
+    apt-get install -y wget build-essential && \
+    wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
+    tar -xvzf ta-lib-0.4.0-src.tar.gz && \
+    cd ta-lib && \
+    ./configure --prefix=/usr && make && make install && \
+    cd .. && rm -rf ta-lib*
 
-# Copy and install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Python packages using conda (faster + prebuilt TA-Lib)
+COPY environment.yml .
+RUN conda env create -f environment.yml
+SHELL ["conda", "run", "-n", "tradingbot", "/bin/bash", "-c"]
 
-# Install Playwright browsers
-RUN playwright install --with-deps
-
-# Copy app code
+# Copy app files
 COPY . .
 
-# Start command
-CMD ["python", "run.py"]
+# Expose FastAPI port
+EXPOSE 8000
+
+# Run FastAPI app
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
