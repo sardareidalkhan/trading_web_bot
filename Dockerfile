@@ -2,24 +2,27 @@ FROM continuumio/miniconda3
 
 WORKDIR /app
 
-# Copy environment files
+# Copy environment definition
 COPY environment.yml .
 COPY requirements.txt .
 
-# Create Conda environment (this installs everything in env + pip packages)
+# Create the Conda environment
 RUN conda env create -f environment.yml
 
-# Use Conda environment for the rest of the steps
+# Activate environment for subsequent RUN commands
 SHELL ["conda", "run", "-n", "tradingbot", "/bin/bash", "-c"]
 
-# Copy entire project into the image
-COPY . .
+# ✅ Install Python packages with pip
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install Playwright browsers
+# ✅ Install Playwright browsers
 RUN python -m playwright install
 
-# Expose port (if using FastAPI or Flask)
+# Copy all source files
+COPY . .
+
+# Expose FastAPI port
 EXPOSE 8000
 
 # Run the app
-CMD ["python", "app/main.py"]
+CMD ["conda", "run", "--no-capture-output", "-n", "tradingbot", "python", "app/main.py"]
