@@ -1,5 +1,86 @@
 [
   {
+    "timestamp": "2025-07-29T00:13:07.155905",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-29T00:11:15.003858",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-29T00:10:26.793239",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-29T00:08:13.757083",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-29T00:06:51.414115",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-29T00:05:28.013131",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-29T00:04:09.717672",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "DOWN",
+    "confidence": 90
+  },
+  {
+    "timestamp": "2025-07-29T00:00:40.621336",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "2m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
+    "timestamp": "2025-07-28T23:59:26.325335",
+    "user": "admin@bot.com",
+    "symbol": "USD/PKR OTC",
+    "platform": "quotex",
+    "timeframe": "1m",
+    "direction": "NO_SIGNAL",
+    "confidence": 0
+  },
+  {
     "timestamp": "2025-07-27T18:28:01.024645",
     "user": "admin@bot.com",
     "symbol": "USD/PKR OTC",
